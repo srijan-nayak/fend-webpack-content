@@ -1,3 +1,4 @@
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
@@ -5,6 +6,12 @@ module.exports = {
   mode: "development",
   devtool: "source-map",
   entry: "./src/client/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "main.js",
+    libraryTarget: "var",
+    library: "Client",
+  },
   module: {
     rules: [
       {

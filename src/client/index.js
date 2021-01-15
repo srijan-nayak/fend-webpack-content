@@ -7,5 +7,4 @@ import "./styles/header.scss";
 import { handleSubmit } from "./js/formHandler";
 import { checkForName } from "./js/nameChecker";
 
-console.log(handleSubmit);
-console.log(checkForName);
+export { handleSubmit, checkForName };
